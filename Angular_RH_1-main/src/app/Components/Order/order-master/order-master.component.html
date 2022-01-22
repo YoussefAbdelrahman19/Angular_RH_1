@@ -1,0 +1,10 @@
+<div class="bg-danger fs-4 text-white p-5">
+    <p>Fired from order master</p>
+    <span class="mx-2">Select Category:</span>
+    <select name="category" id="category" class="select">
+    <option value="{{ category.Id }}" *ngFor="let category of categoryList">
+      {{ category.Name }}
+    </option>
+  </select>
+    <app-order-details style="text-align: center; border: 1px solid black"></app-order-details>
+</div>

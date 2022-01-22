@@ -1,0 +1,10 @@
+<div class=" fs-4 p-2">
+    <p class="text-center h4 text-danger my-5">Fired from Parent Component</p>
+    <span class="mx-2">Select Category:</span>
+    <select name="category" id="category" #ele (change)="myOut(ele.value)" [(ngModel)]="checkit" class="m-2 p-2 ">
+    <option value="{{ category.Id }}" *ngFor="let category of categoryList">
+      {{ category.Name }}
+    </option>
+  </select>
+    <app-order-details [productId]="checkit"></app-order-details>
+</div>

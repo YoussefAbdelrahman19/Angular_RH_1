@@ -1,0 +1,22 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Needed Quantaty</th>
+            <th scope="col">Add to Chart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of getByProductId(); let i = index">
+            <th scope="row">{{ item.Id }}</th>
+            <td>{{ item.Name }}</td>
+            <td>{{ item.Quantity }}</td>
+            <td>{{ item.Price }}</td>
+            <td><input type="number" class="form-control" /></td>
+            <td><button class="btn btn-primary">ADD</button></td>
+        </tr>
+    </tbody>
+</table>

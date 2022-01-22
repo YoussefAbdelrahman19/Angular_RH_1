@@ -1,0 +1,38 @@
+<app-header class=""></app-header>
+<p>
+    Oder Content And details
+    <app-order-master></app-order-master>
+</p>
+<p class="text-center text-primary h5 p-2 border border-2 border-danger my-5">
+    Test Code Here pipe: {{ 10 | usdtoegp: 100 | currency: "USD" }}
+</p>
+<div class="border border-primary p-2">
+    <h1 class="text-center" *ngIf="companyInfo.name == 'Clicked'">
+        Company Info
+    </h1>
+    <p (click)="displayName()">{{ companyInfo.name }}</p>
+    <p class="pb-5" (click)="toggleWord()">{{ companyInfo.logo }}</p>
+    <p #myelem>Refernce element</p>
+    <p>{{ myelem.innerHTML }}</p>
+    <!-- <p *ngFor="let item of companyInfo.services" (mouseenter)="addStyle()" #st class="border border-2 p-2 fw-bold border-dark">{{item}}</p> -->
+    <!-- Outer Table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of mainProducts; let i = index">
+                <th scope="row">{{ item.Id }} and i={{ i }}</th>
+                <td>{{ item.Name }}</td>
+                <td>{{ item.Quantity }}</td>
+                <td>{{ item.Price }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer class="p-5"></app-footer>
