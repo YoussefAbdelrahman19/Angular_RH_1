@@ -16,7 +16,7 @@
     <p>{{ myelem.innerHTML }}</p>
     <!-- <p *ngFor="let item of companyInfo.services" (mouseenter)="addStyle()" #st class="border border-2 p-2 fw-bold border-dark">{{item}}</p> -->
     <!-- Outer Table -->
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th scope="col">Id</th>
@@ -27,7 +27,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let item of mainProducts; let i = index">
-                <th scope="row">{{ item.Id }} and i={{ i }}</th>
+                <th scope="row">{{ i }}</th>
                 <td>{{ item.Name }}</td>
                 <td>{{ item.Quantity }}</td>
                 <td>{{ item.Price }}</td>

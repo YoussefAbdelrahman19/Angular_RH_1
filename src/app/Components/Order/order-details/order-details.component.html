@@ -15,8 +15,8 @@
             <td>{{ item.Name }}</td>
             <td>{{ item.Quantity }}</td>
             <td>{{ item.Price }}</td>
-            <td><input type="number" class="form-control" /></td>
-            <td><button class="btn btn-primary">ADD</button></td>
+            <td><input type="number" class="form-control" #quant /></td>
+            <td><button class="btn btn-primary" (click)="updateTotalAmount(quant.value,item)">ADD</button></td>
         </tr>
     </tbody>
 </table>

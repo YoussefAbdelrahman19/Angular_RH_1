@@ -7,7 +7,7 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-order-details',
@@ -57,6 +57,13 @@ export class OrderDetailsComponent implements OnInit, OnChanges {
     console.log("List:" +this.getByProductId());
     this.check();
     this.getByProductId();
+
+  }
+  updateTotalAmount(pAmout:any,pPrice:any){
+    this.totalPriceDetails+=pAmout*pPrice.Price;
+    console.log("The Obj :" +pPrice);
+    console.log("Total Price"+ this.totalPriceDetails);
+    this.totalPriceChanged.emit(this.totalPriceDetails);
 
   }
 

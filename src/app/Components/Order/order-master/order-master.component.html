@@ -6,5 +6,6 @@
       {{ category.Name }}
     </option>
   </select>
-    <app-order-details [productId]="checkit"></app-order-details>
+    <app-order-details [productId]="checkit" (totalPriceChanged)="updateTotalPriceInMaster($event)"></app-order-details>
+    <h2>Total price is :{{totalPrice}}</h2>
 </div>
